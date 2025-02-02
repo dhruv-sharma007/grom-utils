@@ -11,6 +11,15 @@ A utility package for Express.js applications offering simplified async handling
 - **Rate Limiting:** Simple middleware to limit requests per IP.
 - **Logging:** Colorful, timestamped logs.
 
+## Functions
+
+- `grAsyncHandler`
+- `grCheck`
+- `grResponse`
+- `grValidate`
+- `grRateLimit`
+- `grLogger`
+
 ## Installation
 
 ```bash

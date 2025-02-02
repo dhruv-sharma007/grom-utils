@@ -1,16 +1,37 @@
 {
   "name": "grom-utils",
-  "version": "1.0.0",
-  "description": "This is a utility package to make simple some utility funtions and check",
+  "version": "1.0.1",
+  "description": "A lightweight utility package for simplified error handling, validation, and API responses.",
   "main": "index.js",
+  "module": "index.js",
   "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/index.js"
   },
   "keywords": [
     "grom-utils",
-    "utility"
+    "utility",
+    "error-handling",
+    "validation",
+    "api-response"
   ],
   "author": "Dhruv Sharma",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhruv-sharma007/grom-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhruv-sharma007/grom-utils/issues"
+  },
+  "homepage": "https://github.com/dhruv-sharma007/grom-utils/blob/main/README.md",
+  "files": [
+    "index.js",
+    "Utility/",
+    "middleware/",
+    "LICENSE"
+  ]
 }
