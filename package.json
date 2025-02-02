@@ -1,0 +1,16 @@
+{
+  "name": "grom-utils",
+  "version": "1.0.0",
+  "description": "This is a utility package to make simple some utility funtions and check",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "grom-utils",
+    "utility"
+  ],
+  "author": "Dhruv Sharma",
+  "license": "MIT"
+}
