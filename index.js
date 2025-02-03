@@ -1,3 +1,4 @@
+// index.js
 import ApiResponse from "./Utility/Apiresponse.js";
 import ApiError from "./Utility/ApiError.js";
 
@@ -99,4 +100,15 @@ class Grom {
   }
 }
 
+const grom = new Grom();
+
+// Export named functions by binding them to the grom instance
+export const grAsyncHandler = grom.grAsyncHandler.bind(grom);
+export const grCheck = grom.grCheck.bind(grom);
+export const grResponse = grom.grResponse.bind(grom);
+export const grValidate = grom.grValidate.bind(grom);
+export const grRateLimit = grom.grRateLimit.bind(grom);
+export const grLogger = grom.grLogger.bind(grom);
+
+// Optionally, you can also export the class itself if needed
 export default Grom;

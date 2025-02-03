@@ -1,4 +1,5 @@
-const ApiResponse = require("./Utility/ApiResponse.cjs");
+// index.cjs
+const ApiResponse = require("./Utility/Apiresponse.cjs");
 const ApiError = require("./Utility/ApiError.cjs");
 
 class Grom {
@@ -47,7 +48,6 @@ class Grom {
       const filteredLogs = requestLogs.filter(timestamp => now - timestamp < timeWindow);
       filteredLogs.push(now);
       this.rateLimits.set(ip, filteredLogs);
-
       if (filteredLogs.length > maxRequests) {
         return next(new ApiError(429, "Too many requests, slow down!"));
       }
@@ -62,4 +62,14 @@ class Grom {
   }
 }
 
-module.exports = Grom;
+const grom = new Grom();
+
+module.exports = {
+  grAsyncHandler: grom.grAsyncHandler.bind(grom),
+  grCheck: grom.grCheck.bind(grom),
+  grResponse: grom.grResponse.bind(grom),
+  grValidate: grom.grValidate.bind(grom),
+  grRateLimit: grom.grRateLimit.bind(grom),
+  grLogger: grom.grLogger.bind(grom),
+  Grom: Grom // Also export the class if needed
+};
