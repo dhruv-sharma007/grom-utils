@@ -162,4 +162,6 @@ Dhruv Sharma ([[@dhruv-sharma007](https://github.com/dhruv-sharma007)])
 
 ## 👥 Contributors
 
+Jasraj Chouhan ([[@Jasraj Chouhan](https://github.com/JasrajChouhan)])
+
 Become contributor in this project
