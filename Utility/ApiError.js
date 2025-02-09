@@ -1,3 +1,5 @@
+import { config } from "../config";
+
 class ApiError extends Error {
     /**
      * Custom API Error Handler
@@ -12,7 +14,7 @@ class ApiError extends Error {
         this.errors = Array.isArray(errors) ? errors : [errors]; // Ensure it's always an array
 
         // Capture stack trace for better debugging (excluding constructor call)
-        if (process.env.NODE_ENV !== 'production') {
+        if (config.NODE_ENV !== 'production') {
             Error.captureStackTrace(this, this.constructor);
         }
 
